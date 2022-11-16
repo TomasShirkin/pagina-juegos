@@ -2,7 +2,7 @@ import Button from "../../Buttons";
 import {useNavigate} from "react-router-dom";
 import background from "../../../assets/background.jpg";
 import background2 from "../../../assets/fondo2.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Home () { 
 
