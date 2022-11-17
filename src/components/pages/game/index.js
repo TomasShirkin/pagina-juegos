@@ -8,6 +8,8 @@ const API_URL = "https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/que
 function Game () {
     const [loading, setLoading] = useState(true);
     const [questions, setQuestions] = useState([]);
+    const [selectedAnswers, setSelectedAnswers] = useState([]);
+    const [result, setResult] = useState(0);
 
     console.log(questions)
 
@@ -36,14 +38,19 @@ function Game () {
                   <form>
                     {
                         questions.map((pregunta)=>{
-                            return <QuestionCard preguntaActual={pregunta}/>
+                            return <QuestionCard key={pregunta.id} 
+                            preguntaActual={pregunta}
+                            selectedAnswers={selectedAnswers}
+                            setSelectedAnswers={setSelectedAnswers}
+                            />
                         })
                     }
                   </form>
-                <h1>El juego</h1>
-            </section>
-        </div>
-    )
-}
+<div className="level-right">
+    <Button onClick={() => console.log('Hola')} text="validar"></Button>
+    </div>
+ </section>
+</div>
+)}
 
 export default Game;
