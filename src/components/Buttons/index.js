@@ -1,8 +1,8 @@
 import './Button.css';
 
-function Button({text, onClick}){
+function Button({text, onClick,disabled}){
     return(
-        <button onClick={onClick} className='button is-primary is-large'>
+        <button disabled={disabled} onClick={onClick} className='button is-primary is-large'>
             {text}
             </button>
     )

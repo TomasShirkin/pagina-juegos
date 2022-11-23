@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import QuestionCard from "../../QuestionCard";
+import Button from "../../Buttons";
+
 
 const API_URL = "https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/questions/harry-potter";
 
@@ -10,6 +12,10 @@ function Game () {
     const [questions, setQuestions] = useState([]);
     const [selectedAnswers, setSelectedAnswers] = useState([]);
     const [result, setResult] = useState(0);
+    function calcularResultado(){
+        const respuestasCorrectas=selectedAnswers.filter((respuesta)=>respuesta.valorOpcion===true)
+        setResult(respuestasCorrectas.length)
+    }
 
     console.log(questions)
 
@@ -47,7 +53,12 @@ function Game () {
                     }
                   </form>
 <div className="level-right">
-    <Button onClick={() => console.log('Hola')} text="validar"></Button>
+    <p>{result}</p>
+    <Button disabled=
+    {
+        selectedAnswers?.length !== questions?.length
+    } 
+    onClick={() => calcularResultado()} text="validar"></Button>
     </div>
  </section>
 </div>
