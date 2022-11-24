@@ -12,9 +12,13 @@ function Game () {
     const [questions, setQuestions] = useState([]);
     const [selectedAnswers, setSelectedAnswers] = useState([]);
     const [result, setResult] = useState(0);
+    const[mostrarResultado, setMostrarResultado] = useState(false);
+
+
     function calcularResultado(){
         const respuestasCorrectas=selectedAnswers.filter((respuesta)=>respuesta.valorOpcion===true)
         setResult(respuestasCorrectas.length)
+        setMostrarResultado(true)
     }
 
     console.log(questions)
@@ -48,17 +52,22 @@ function Game () {
                             preguntaActual={pregunta}
                             selectedAnswers={selectedAnswers}
                             setSelectedAnswers={setSelectedAnswers}
+                            mostrarResultado={mostrarResultado}
                             />
                         })
                     }
                   </form>
 <div className="level-right">
+{
+    mostrarResultado &&
     <p>{result}</p>
+
+}
     <Button disabled=
     {
         selectedAnswers?.length !== questions?.length
     } 
-    onClick={() => calcularResultado()} text="validar"></Button>
+    onClick={() => calcularResultado()} text="Validar"></Button>
     </div>
  </section>
 </div>

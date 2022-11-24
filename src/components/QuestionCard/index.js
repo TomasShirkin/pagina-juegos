@@ -1,12 +1,12 @@
 import "./index.css";
 
-function QuestionCard({ preguntaActual, selectedAnswers,setSelectedAnswers}){
+function QuestionCard({ preguntaActual, selectedAnswers,setSelectedAnswers, mostrarResultado}){
     function seleccionarRespuesta(identificador, valorOpcion){
         const otrasRespuestas=selectedAnswers.filter((respuesta)=> respuesta.id !== identificador)
         setSelectedAnswers([...otrasRespuestas,
         {
             id:identificador,
-            valorOpcion,
+            valorOpcion
         }])
     }
         
@@ -27,7 +27,12 @@ function QuestionCard({ preguntaActual, selectedAnswers,setSelectedAnswers}){
                     id={`${opcion.id}`} 
                     name={opcion.id} 
                     value={opcion.answer}></input>
-                    <label htmlFor={`${preguntaActual.id}`}> {opcion.answer}</label>
+                    <label htmlFor={`${preguntaActual.id}`}
+                    className={
+                        mostrarResultado ?
+                        opcion.is_correct ? "has-text-primary" : "has-text-danger"
+                        :""
+                    }> {opcion.answer}</label>
                     <br/>
                     </div>
                 ))
