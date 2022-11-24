@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TomasShirkin/pagina-juegos.git/static/css/main.c53db4e4.css",
+    "main.js": "/TomasShirkin/pagina-juegos.git/static/js/main.c186b90a.js",
+    "static/js/787.b978bd17.chunk.js": "/TomasShirkin/pagina-juegos.git/static/js/787.b978bd17.chunk.js",
+    "static/media/fondo2.jpg": "/TomasShirkin/pagina-juegos.git/static/media/fondo2.aae2c4c40afd8a39c1cf.jpg",
+    "index.html": "/TomasShirkin/pagina-juegos.git/index.html",
+    "main.c53db4e4.css.map": "/TomasShirkin/pagina-juegos.git/static/css/main.c53db4e4.css.map",
+    "main.c186b90a.js.map": "/TomasShirkin/pagina-juegos.git/static/js/main.c186b90a.js.map",
+    "787.b978bd17.chunk.js.map": "/TomasShirkin/pagina-juegos.git/static/js/787.b978bd17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c53db4e4.css",
+    "static/js/main.c186b90a.js"
+  ]
+}
